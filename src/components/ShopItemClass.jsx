@@ -2,6 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class ShopItemClass extends React.Component {
+/*  constructor (brand, title, description, descriptionFull, price, currency) {
+    this.brand = brand;
+    this.title = title;
+    this.description = description;
+    this.descriptionFull = descriptionFull;
+    this.price = price;
+    this.currency = currency;
+    }
+*/
+static propTypes = {item: PropTypes.instanceOf(ShopItemClass).isRequired}
 
   render() {
     const {item} = this.props;
@@ -26,7 +36,7 @@ class ShopItemClass extends React.Component {
     );
   }
 }
-ShopItemClass.propTypes = {
+/* ShopItemClass.propTypes = {
     item: PropTypes.shape({
       brand: PropTypes.string,
       title: PropTypes.string,
@@ -35,5 +45,5 @@ ShopItemClass.propTypes = {
       price: PropTypes.number,
       currency: PropTypes.string
     })
-  }
+  } */
 export default ShopItemClass;
